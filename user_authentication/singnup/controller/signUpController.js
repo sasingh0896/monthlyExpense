@@ -30,7 +30,7 @@ exports.signUpController = async (req, res)=> {
         tokan
     ]
      let result = await signUpServices.insertuserData(userDetails)
-     if(result){
+     if(result){       
         responses.actionCompleteResponse(res, result)
      }
     }
