@@ -14,6 +14,6 @@ startUpServices.initializeServer();
 app.set("port", envproperties.port)
 
 require('./user_authentication');
-
+require('./expense_manager');
 
 //start server  export NODE_ENV=config     

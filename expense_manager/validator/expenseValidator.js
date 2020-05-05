@@ -9,13 +9,12 @@ function expenseValidation(req, res, next){
         api : "expense"
     }
 
-    let schema =Joi.array().items(
-        Joi.object().keys({
-            item_name = Joi.string().required(),
-            item_price = Joi.number().required(),
-            date = Joi.date().required()
+    let schema = Joi.object().keys({
+            items_name : Joi.string().required(),
+            items_price : Joi.number().required(),
+            purchage_date : Joi.date().required(),
+            id : Joi.string().required()
         })
-    ) 
     let validatefield =  validate.validateFeilds(req.apirefrence, req.body, res, schema)
 
     if(validatefield)

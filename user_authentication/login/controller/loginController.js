@@ -21,7 +21,7 @@ async function loginController(req, res){
           if(md5(password) != userInfo[0].user_password){
               return response.wrongPasswordError(res);
           }
-          return response.actionCompleteResponse(res,"User Loggin", userInfo[0])
+          return response.actionCompleteResponse(res,"User Login", userInfo[0])
     }
     catch(error){
         logging.logError(req.apiReference, {
